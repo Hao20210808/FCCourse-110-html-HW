@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+
+        <link href="../style/style.css" rel="stylesheet" type="text/css">
+
+        <title>CSS: Element Color&Border</title>
+
+    </head>
+
+    <body>
+        <nav>
+            <ul>
+                <li><a href="../Main.html">CONTENTS</a></li>
+                <li><a href="divblock.html">Structure:<br>Div Block</a></li>
+                <li><a href="table.html">Structure:<br>Table</a></li>
+                <li><a href="list.html">Structure:<br>List</a></li>
+                <li><a href="meta.html" target="_self">Structure:<br>Meta</a></li>
+                <li><a href="footer.html" target="_self">Structure:<br>Footer</a></li>
+                <li><a href="font.html">CSS:<br>Font Related Property</a></li>
+                <li><a href="color.html">CSS:<br>Element Color&Border</a></li>
+                <li><a href="placement.html">CSS:<br>Element Placement (Layout)</a></li>
+               
+            </ul>
+        </nav>
+        
+        <h1>CSS Part 2: Element Color&Border</h1>
+
+        <h2>&lt;color&gt;</h2>
+
+        <p>The &lt;color&gt; CSS data type represents a color. A &lt;color&gt; may also include an alpha-channel transparency value, 
+            indicating how the color should composite with its background.</p>
+
+        <p>A <color> can be defined in any of the following ways:<br>
+
+            &emsp; &emsp; Using a keyword (such as blue or transparent). All existing keywords specify a color in the sRGB color space<br>
+            &emsp; &emsp; Using the RGB cubic-coordinate system (via the #-hexadecimal or the rgb() and rgba() functional notations).<br> 
+            &emsp; &emsp; &emsp; These always specify a color in the sRGB color space<br>
+            &emsp; &emsp; Using the HSL cylindrical-coordinate system (via the hsl() and hsla() functional notations).<br>
+            &emsp; &emsp; &emsp; These always specify a color in the sRGB color space<br>
+            &emsp; &emsp; Using the HWB cylindrical-coordinate system (via the hwb() functional notation). These always specify a color in the sRGB color space<br>
+            &emsp; &emsp; Using the LCH cylindrical coordinate system, via the lch() functional notation. This can specify any visible color.<br>
+            &emsp; &emsp; Using the Lab coordinate system, via the lab() functional notation. This can specify any visible color.<br>
+            &emsp; &emsp; Using the color() functional notation, to specify a color in a variety of predefined or custom color spaces.<br></p>
+
+        <h3>Example</h3>
+
+        <h4>html</h4>
+
+        <pre class=ex>
+
+        &lt;p style="color:red"&gt;the color of this text are red.&lt;/p&gt;       
+        </pre>
+            
+        <h3>Result</h3>
+
+        <p style="color:red">the color of this text are red.</p>                    
+        
+        <h2>&lt;border&gt;</h2>
+        
+        <p>As with all shorthand properties, any omitted sub-values will be set to their initial value. 
+            Importantly, border cannot be used to specify a custom value for border-image, but instead sets it to its initial value, i.e., none.</p>
+
+        <p>The border shorthand is especially useful when you want all four borders to be the same. 
+            To make them different from each other, however, you can use the longhand border-width (en-US), border-style (en-US), and border-color (en-US) properties, 
+            which accept different values for each side. Alternatively, you can target one border at a time with the physical (e.g., border-top (en-US) ) 
+            and logical (e.g., border-block-start (en-US)) border properties.</p>
+
+        <h3>Example</h3>
+
+        <h4>CSS</h4>
+        
+        <pre class=ex>
+        div {
+            border: 0.5rem outset pink;
+            outline: 0.5rem solid khaki;
+            box-shadow: 0 0 0 2rem skyblue;
+            border-radius: 12px;
+            font: bold 1rem sans-serif;
+            margin: 2rem;
+            padding: 1rem;
+            outline-offset: 0.5rem;
+        }
+
+        </pre>
+
+        <h4>html</h4>
+
+        <pre class=ex>
+        &lt;div&gt;I am a text with border, box shadow and outline.&lt;/div&gt;   
+        </pre>
+
+        <h3>Result</h3>
+
+        <div class=div>I am a text with border, box shadow and outline.</div>
+        
+        
+    </body>
+
+    <footer>
+        <address>
+            <p>Group Member: 409850061 林鼎宸 409850400 簡宏宇  409850434 楊浩中 409850392 李明樺 </p>
+        </address>
+        
+    </footer>
+
+</html>

@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+
+        <link href="../style/style.css" rel="stylesheet" type="text/css">
+
+        <style>
+            div
+            {
+                background-color: #c2c2c2 ; 
+                border-style:dotted ;
+                border-width:0.5px ;
+            }
+
+            hr
+            {
+                color: black ;  
+            }
+            
+                       
+            table 
+            {
+                border-spacing: 0;
+                width: 100%;
+            }
+            
+            tr 
+            {
+                text-align: center;
+            }
+            
+            th 
+            {
+                padding: 10px;
+            }
+            
+            table tbody tr:nth-child(odd)
+            {
+                background-color: #eee
+            }
+            
+            table thead 
+            {
+                background-color: rgb(125, 125, 125);
+                color: white;
+            }
+            
+            table thead th:first-child 
+            {
+                border-radius: 5px 0 0 0;
+                border: 1px solid rgb(125, 125, 125);
+            }
+            
+            table thead th:last-child 
+            {
+                border-radius: 0 5px 0 0;
+                border-right: 1px solid rgb(125, 125, 125);
+            }
+            
+            table tbody tr:last-child td:first-child 
+            {
+                border-radius: 0 0 0 5px;
+            }
+
+            table tbody tr:last-child td:last-child 
+            {
+                border-radius: 0 0 5px 0;
+            }
+        </style>
+
+        <title>Structure: meta </title>
+
+    </head>
+
+    <body>
+        <nav>
+            <ul>
+                <li><a href="../Main.html">CONTENTS</a></li>
+                <li><a href="divblock.html">Structure:<br>Div Block</a></li>
+                <li><a href="table.html">Structure:<br>Table</a></li>
+                <li><a href="list.html">Structure:<br>List</a></li>
+                <li><a href="meta.html">Structure:<br>Meta</a></li>
+                <li><a href="footer.html">Structure:<br>Footer</a></li>
+                <li><a href="font.html">CSS:<br>Font Related Property</a></li>
+                <li><a href="color.html">CSS:<br>Element Color&Border</a></li>
+                <li><a href="placement.html">CSS:<br>Element Placement (Layout)</a></li>
+               
+            </ul>
+        </nav>
+        
+        <h1>Structure Part 4: Meta</h1>
+
+        <article>
+            <h2>
+                Introduction
+            </h2>
+            <p>
+                Metadata is the data information of data. The &lt;meta&gt; tag provides metadata for the HTML document.<br><br>
+                Metadata is not displayed on the client side, but is parsed by the browser. The meta element is often used to specify the description of the web page, keywords, the last modification time of the file, the author and other metadata.<br><br>
+                Metadata can be invoked using browsers (how to display content or reload pages), search engines (keywords), or other web services.<br><br>
+                &lt;meta&gt; tags always go inside the &lt;head&gt; element, and are typically used to specify character set, page description, keywords, author of the document, and viewport settings.
+            </p>
+
+            <h4>Example<br></h4>
+            <div style="background-color: #464343 ;">
+                <pre style="color:white">
+                    &lt;head&gt;<br>
+                        &lt;meta charset="UTF-8"&gt;<br>
+                        &lt;meta name="description" content="HTML/CSS Web tutorials"&gt;<br>
+                        &lt;meta name="keywords" content="HTML, CSS"&gt;<br>
+                        &lt;meta name="author" content="簡宏宇"&gt;<br>
+                        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;<br>
+                    &lt;head&gt;   
+                </pre>
+                
+            </div>
+
+            <br><hr>
+
+            <h2>
+                Attribute
+            </h2>
+            <div class="main">
+                <table>
+                  <thead>
+                    <th>attribute</th>
+                    <th>value</th>
+                    <th>description</th>
+                  </thead>
+                  
+                  <tbody>
+                    <tr>
+                      <td>charset</td>
+                      <td>character_set</td>
+                      <td>Specifies the character encoding for the HTML document</td>
+                    </tr>
+                    <tr>
+                      <td>content</td>
+                      <td>text</td>
+                      <td>Specifies the value associated with the http-equiv or name attribute</td>
+                    </tr>
+                    <tr>
+                      <td>http-equiv</td>
+                      <td>content-security-policy<br>
+                        content-type<br>
+                        default-style<br>
+                        refresh<br>	</td>
+                      <td>Provides an HTTP header for the information/value of the content attribute</td>
+                    </tr>
+                    <tr>
+                        <td>name</td>
+                        <td>application-name<br>
+                            author<br>
+                            description<br>
+                            generator<br>
+                            keywords<br>
+                            viewport<br></td>
+                        <td>Specifies a name for the metadata</td>
+                      </tr>
+                  </tbody>
+                </table>
+            </div>
+
+            <br><hr>
+
+            <h2>
+                Attribute-charset
+            </h2>
+            <p>
+                &lt;meta&gt; charset is used to specify what encoding character set that the webpage content is used for. Most webpage encodings are now UTF-8.
+            </p>
+            <div style="background-color: #464343 ;">
+                <pre style="color:white">
+                    &lt;meta charset="utf-8"&gt;
+                </pre>
+            </div>
+
+            <h2>
+                Attribute-http-equiv
+            </h2>
+            <ul>
+                <li>Content-Security-Policy :</li>
+                    <p>Content-security-policy is use to specifies a content policy for the document.</p>
+                    <div style="background-color: #464343 ;">
+                        <pre style="color:white">
+                            &lt;meta http-equiv="content-security-policy" content="default-src 'self'"&gt;
+                        </pre>
+                    </div>
+                <br>
+                <li>Content-Type :</li>
+                    <P>Content-type is use to specifies the character encoding for the document.</P>
+                    <div style="background-color: #464343 ;">
+                        <pre style="color:white">
+                            &lt;meta http-equiv="content-type" content="text/html; charset=UTF-8"&gt;
+                        </pre>
+                    </div>
+                <br>
+                <li>Default-Style :</li>
+                    <P>Default-style is use to specified the preferred style sheet to use.</P>
+                    <div style="background-color: #464343 ;">
+                        <pre style="color:white">
+                            &lt;meta http-equiv="default-style" content="the document's preferred stylesheet"&gt;
+                        </pre>
+                    </div>
+                <br>
+                <li>Refresh :</li>
+                    <p>Defines a time interval for the document to refresh itself.</p>
+                    <div style="background-color: #464343 ;">
+                        <pre style="color:white">
+                            &lt;meta http-equiv="refresh" content="60"&gt;
+                        </pre>
+                    </div>
+            </ul>
+
+            <h2>
+                Attribute-name
+            </h2>
+            <ul>
+                <li>Application-Name :</li>
+                    <p>Application-name is use to specifies the name of the Web application that the page represents</p>
+                <br>
+                <li>Author :</li>
+                    <P>Author is use to specifies the name of the author of the document.</P>
+                    <div style="background-color: #464343 ;">
+                        <pre style="color:white">
+                            &lt;meta name="author" content="Hactor Jian"&gt;
+                        </pre>
+                    </div>
+                <br>
+                <li>Description :</li>
+                    <P>Description is use to specifies a description of the page. Search engines can pick up this description to show with the results of searches.</P>
+                    <div style="background-color: #464343 ;">
+                        <pre style="color:white">
+                            &lt;meta name="description" content="Free web tutorials"&gt;
+                        </pre>
+                    </div>
+                <br>
+                <li>Generator :</li>
+                    <p>Generator is use to specifies one of the software packages used to generate the document (not used on hand-authored pages). </p>
+                    <div style="background-color: #464343 ;">
+                        <pre style="color:white">
+                            &lt;meta name="generator" content="FrontPage 4.0"&gt;
+                        </pre>
+                    </div>
+                <br>
+                <li>Keywords :</li>
+                    <p>Keywords are use to specifies a comma-separated list of keywords - relevant to the page (Informs search engines what the page is about).</p>
+                    <div style="background-color: #464343 ;">
+                        <pre style="color:white">
+                            &lt;meta name="keywords" content="HTML, CSS"&gt;
+                        </pre>
+                    </div>
+                <br>
+                <li>Viewport :</li>
+                    <p>Controls the viewport (the user's visible area of a web page).</p>
+                    <div style="background-color: #464343 ;">
+                        <pre style="color:white">
+                            &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+                        </pre>
+                    </div>
+                    <p>example</p>
+                    <table>
+                        <thead>
+                            <th>without viewport</th>
+                            <th>with viewport</th>
+                        </thead>
+                        <tbody>
+                            <td><img src="../image/withoutView.PNG"></td>
+                            <td><img src="../image/withView.PNG"></td>
+                        </tbody>
+                    </table>
+                    
+
+            </ul>
+
+        </article>
+        
+        
+    </body>
+
+    <footer>
+        <address>
+            <p>Group Member: 409850061 林鼎宸 409850400 簡宏宇  409850434 楊浩中 409850392 李明樺 </p>
+        </address>
+        
+    </footer>
+
+</html>

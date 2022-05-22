@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+
+        <link href="../style/style.css" rel="stylesheet" type="text/css">
+
+        <title>CSS: Element Placement (Layout) </title>
+        <style>
+        div.static{
+            position: static;
+            border: 3px solid #a121ad;
+        }
+        </style>
+        <style>
+            div.relative {
+              position: relative;
+              width: 400px;
+              height: 200px;
+              left: 30px;
+              border: 3px solid #ad7521;
+            }
+            </style>
+        <style>
+            div.fixed {
+              position: fixed;
+              bottom: 0;
+              right: 0;
+              width: 150px;
+              border: 3px solid #3621ad;
+            }
+            </style>
+        <style>
+            div.absolute {
+            position: absolute;
+            top: 80px;
+            right: 0;
+            width: 200px;
+            height: 100;
+            border: 3px solid #ad2121;
+          }
+          </style>
+        <style>
+        div.sticky {
+         position: -webkit-sticky;
+         position: sticky;
+         top: 0;
+         padding: 5px;
+         background-color: #cad0e8;
+         border: 2px solid #afa84c;
+        }
+        </style>
+    </head>
+
+    <body>
+        <nav>
+            <ul>
+                <li><a href="../Main.html">CONTENTS</a></li>
+                <li><a href="divblock.html">Structure:<br>Div Block</a></li>
+                <li><a href="table.html">Structure:<br>Table</a></li>
+                <li><a href="list.html">Structure:<br>List</a></li>
+                <li><a href="meta.html" target="_self">Structure:<br>Meta</a></li>
+                <li><a href="footer.html" target="_self">Structure:<br>Footer</a></li>
+                <li><a href="font.html">CSS:<br>Font Related Property</a></li>
+                <li><a href="color.html">CSS:<br>Element Color&Border</a></li>
+                <li><a href="placement.html">CSS:<br>Element Placement (Layout)</a></li>
+               
+            </ul>
+        </nav>
+        
+        <h1>CSS Part 3: Element Placement (Layout)</h1>
+        <h2>The position Property</h2>
+        <p>The position Property is use element to specifies the position.  </p>
+        <p>There are five different types:</Sp>
+        <ul>
+            <li><b>static:</b> controls the width of the table.</li>
+            <li><b>relative:</b> controls the width of the table.</li>
+            <li><b>fixed:</b> controls the width of the table.</li>
+            <li><b>absolute:</b> controls the width of the table.</li>
+            <li><b>sticky:</b> controls the width of the table.</li>
+        </ul>
+        <p>This element is ues top,right,bottom, and left to determine the local position. <br>The position
+            neet to set first or the properties won't work.
+        </p>
+        <hr/>        
+       <h2>static</h2>
+        <P>This element is not affected by top, bottom, left, and right.<br>
+        Write a class at head.
+        <h3>Example</h3>
+        <p> style
+            <br>
+            div.static{
+            position: static;
+            <br>
+            border: 3px solid #73AD21;
+        }
+        <br>
+        /style
+        <br>
+        div class="static"This element has static;/div
+        <br>
+        div class Write in body.
+        position decide the element to use.
+        boarder decide how big the square ,and the color.
+        </p>
+        </P>
+            <div class="static">
+            This element has static;
+       </div>
+
+       <hr/>>
+
+       <h2>relative </h2>
+       <p>
+        The top, right, bottom, and left propertie will cause the element adjusted away from its normal position
+       </p>
+       <h3>Example </h3>
+       <p>
+        style<br>
+        div.relative {
+          position: relative;<br>
+          width: 400px;<br>
+          height: 200px;<br>
+          left: 30px;<br>
+          border: 3px solid #ad7521;
+        }<br>
+        /style<br>
+        div class="relative"{
+            This element has relative.
+             }
+            /div
+        </p>
+       <div class="relative">{
+       This element has relative.
+        }
+       </div>
+
+       <hr/>
+
+       <h2>fixed</h2>
+       <p>fixed element will have a viewpoet stays in the page, it won't leave even the page is scrolled.
+     Use top, right, bottom, and left to position the element.
+     </p>
+     <p>
+        style<br>
+            div.fixed {
+              position: fixed;<br>
+              bottom: 0;<br>
+              right: 0;<br>
+              width: 150px;<br>
+              border: 3px solid #3621ad;
+            }
+            /style<br>
+        div class="fixed"   
+            The element has fixed.
+            /div
+     </p>
+     <div class="fixed">
+     The element has fixed.
+     </div>
+
+     <hr/>
+
+     <h2>absolute</h2>
+     <p>
+        This element postion relative to the nearest position, and it removed from the normal document flow, and no space is created for the element in the page layout.
+        If the positioned element has no positioned ancestors, it uses the document body, and moves along with page scrolling.
+     </p>
+     <h3>Example </h3>
+     <p>style<br>
+        div.relative {
+              position: relative;<br>
+              width: 600px;<br>
+              height: 400px;<br>
+              border: 3px solid #2185ad;
+            } <br>
+         div.absolute {
+        position: absolute;<br>
+        top: 0px;<br>
+        right: 0;<br>
+        width: 200px;<br>
+        height: 100px;<br>
+        border: 3px solid #ad2121;<br>
+      }<br>
+     /style
+     div calss="relative"
+        The element has relative.<br>
+        div class="absolute"
+      The element has absolute.
+      /div<br>
+     /div
+     </p>
+     <div class="relative">This div element has position: relative;
+        <div class="absolute">This div element has position: absolute;</div>
+      </div>
+      
+      <hr/>
+
+     <h2>sticky</h2>
+     <p>
+         The element will move when user scrolled the position.It positioned relative until a given offset position when is met in the viewport.<br>
+         Some browser dosen't supprot the sticky, and some brower require to -webkit- prefix.
+     </p>
+     <h3>Example </h3>
+     style<br>
+     div.sticky{
+         position: -webkit-sticky;
+         position: sticky;
+         top: 0;
+         padding: 5px;
+         background-color: #cad0e8;
+         border: 2px solid #afa84c;
+         }<br>
+      /style<br>
+      div calss="sticky"
+      this is sticky.
+      /div
+      <div class="sticky">I am sticky!</div>
+      <div style="padding-bottom:2000px"></div>
+
+    </body>
+
+
+    <footer>
+        <address>
+            <p>Group Member: 409850061 林鼎宸 409850400 簡宏宇  409850434 楊浩中 409850392 李明樺 </p>
+        </address>
+        
+    </footer>
+
+</html>

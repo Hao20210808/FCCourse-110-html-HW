@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+
+        <link href="../style/style.css" rel="stylesheet" type="text/css">
+
+        <title>CSS: Font Related Property </title>
+
+    </head>
+
+    <body>
+        <nav>
+            <ul>
+                <li><a href="../Main.html">CONTENTS</a></li>
+                <li><a href="#family">Font Related Property:<br>font-family</a></li>
+                <li><a href="#size">Font Related Property:<br>font-size</a></li>
+                <li><a href="#stretch">Font Related Property:<br>font-stretch</a></li>
+                <li><a href="#style">Font Related Property:<br>font-style</a></li>
+               
+            </ul>
+        </nav>
+        
+        <h1 id="top">CSS Part 1: Font Related Property</h1>
+        <ul>
+            <li>The font property may be specified as a single keyword, which will select a system font<br>or as a shorthand for various font-related properties.</li>
+            <li>If font is specified as a system keyword, it must be one <br>
+                <code>caption</code>,<code>icon</code>, <code>menu</code>, 
+                <code>message-box</code>, <code>small-caption</code>, <code>status-bar</code></li>
+            
+        </ul>
+
+        <article id="family">
+            <h2>font-family </h2> 
+
+            <p>Font-family can set one font or multiple different fonts. Each font is separated by a comma ",". 
+                When the browser loads the page style, it will judge from the first font on the left.
+                If there is no font available at the end, the computer default font is used. At this time,
+                you can specify which default font through generic-family.</p>
+
+            <p>Font family names must either be given quoted as strings, or unquoted as a sequence of one or more identifiers. 
+                This means that punctuation characters and digits at the start of each token must be escaped in unquoted font family names.</p>
+
+            <p>There are five commonly used generic words: <br>
+                <code>serif</code>, <code>sans-serif</code>, <code>monospace</code>, <code>cursive</code> and <code>fantasy</code></p>
+            
+            <p><code>serif</code>:<br>
+                Glyphs have finishing strokes, flared or tapering ends, or have actual serifed endings.<br>
+                For example: Lucida Bright, Lucida Fax, Palatino, Palatino Linotype, Palladio, URW Palladio, serif.</p>
+
+            <p><code>sans-serif</code>:<br>
+                Glyphs have stroke endings that are plain.<br>
+                For example: Open Sans, Fira Sans, Lucida Sans, Lucida Sans Unicode, Trebuchet MS, Liberation Sans, Nimbus Sans L, sans-serif.</p>
+
+            <p><code>monospace</code>:<br>
+                All glyphs have the same fixed width.<br>
+                For example: Fira Mono, DejaVu Sans Mono, Menlo, Consolas, Liberation Mono, Monaco, Lucida Console, monospace.</p>
+
+            <p><code>cursive</code>:<br>
+                Glyphs in cursive fonts generally have either joining strokes or other cursive characteristics beyond those of italic typefaces. 
+                The glyphs are partially or completely connected, and the result looks more like handwritten pen or brush writing than printed letterwork.<br>
+                For example: Brush Script MT, Brush Script Std, Lucida Calligraphy, Lucida Handwriting, Apple Chancery, cursive.</p>
+
+            <p><code>fantasy</code>:<br>
+                Fantasy fonts are primarily decorative fonts that contain playful representations of characters.<br>
+                For example: Papyrus, Herculanum, Party LET, Curlz MT, Harrington, fantasy.</p>
+
+            <h3>Example</h3>   
+            
+            <h4>CSS</h4>
+            <pre class=ex>
+            .serif {
+            font-family: Times, "Times New Roman", Georgia, serif;
+            }
+            
+            .sansserif {
+                font-family: Verdana, Arial, Helvetica, sans-serif;
+            }
+                      
+            .monospace {
+                font-family: "Lucida Console", Courier, monospace;
+            }
+                      
+            .cursive {
+                font-family: cursive;
+            }
+                      
+            .fantasy {
+                font-family: fantasy; 
+            }
+            
+            </pre>
+
+            <h4>html</h4>
+            <pre class=ex>
+            &lt;p class=serif&gt;This is an example of a serif font.&lt;/p&gt;<br>
+            &lt;p class=sanserifs&gt;This is an example of a sans-serif font.&lt;/p&gt;<br>
+            &lt;p class=monospace&gt;This is an example of a monospace font.&lt;/p&gt;<br>
+            &lt;p class=cursive&gt;This is an example of a cursive font.&lt;/p&gt;<br>
+            &lt;p class=fantasy&gt;This is an example of a fantasy font.&lt;/p&gt;
+            </pre>
+
+            <h3>Result</h3>
+            <pre>
+            <p class=serif>This is an example of a serif font.</p>
+            <p class=sanserifs>This is an example of a sans-serif font.</p>
+            <p class=monospace>This is an example of a monospace font.</p>
+            <p class=cursive>This is an example of a cursive font.</p>
+            <p class=fantasy>This is an example of a fantasy font.</p>
+            </pre>
+            
+            <li class=top><a href="#top">Back to top</a></li>
+
+        </article>
+        <br><br><br>
+
+        <article id="size">
+            <h2>font-size</h2>
+
+            <p>The font-size CSS property sets the size of the font. 
+                There are several ways to specify the font size, including keywords or numerical values for pixels or ems.</p>
+            
+            <h3>Values</h3>
+            
+            <p><code>xx-small</code>, <code>x-small</code>, <code>small, medium</code>, <code>large</code>, <code>x-large</code>, <code>xx-large</code>, <code>xxx-large</code>:<br>
+            Absolute-size keywords, based on the user's default font size (which is medium).</p>
+
+            <p><code>larger</code>, <code>smaller</code>:<br>
+                Relative-size keywords. The font will be larger or smaller relative to the parent element's font size, 
+                roughly by the ratio used to separate the absolute-size keywords above.</p>
+
+            <p><code>&lt;length&gt;</code>:<br>
+                A positive &lt;length&gt; value. For most font-relative units (such as em and ex), the font size is relative to the parent element's font size.
+                
+                For font-relative units that are root-based (such as rem), the font size is relative to the size of the font used by the &lt;html&gt; (root) element.</p>
+
+            <p><code>&lt;percentage&gt;</code>:<br>
+                A positive &lt;percentage&gt; value, relative to the parent element's font size.</p>
+
+            <h3>Example</h3>
+
+            <h4>CSS</h4>
+
+            <pre class=ex>
+            .small {
+                font-size: xx-small;
+            }
+
+            .larger {
+                font-size: larger;
+            }
+
+            .point {
+                font-size: 24pt;
+            }
+
+            .percent {
+                font-size: 200%;
+            }    
+            </pre>
+
+            <h4>html</h4>
+
+            <pre class=ex>
+            &lt;p class="small"&gt;Small Text&lt;/p&gt;<br>
+            &lt;p class="larger"&gt;Larger Text&lt;/p&gt;<br>
+            &lt;p class="point"&gt;24 point Text&lt;/p&gt;<br>
+            &lt;p class="percent"&gt;200% Text&lt;/p&gt;          
+            </pre>
+            
+            <h3>Result</h3>
+
+            <pre>
+            <p class="small">Small Text</p>
+            <p class="larger">Larger Text</p>
+            <p class="point">24 point Text</p>
+            <p class="percent">200% Text</p>                
+            </pre>
+
+            <li class=top><a href="#top">Back to top</a></li>
+
+        </article>
+        <br><br><br>
+
+        <article id="stretch">
+            <h2>font-stretch</h2>
+
+            <p>Some font families offer additional faces in which the characters are narrower than the normal face (condensed faces) 
+                or wider than the normal face (expanded faces).<br>
+                You can use font-stretch to select a condensed or expanded face from such fonts. 
+                If the font you are using does not offer condensed or expanded faces, this property has no effect.</p>
+
+            <h3>Values</h3>
+
+            <p><code>normal</code>:<br>
+                Specifies a normal font face.</p>
+
+            <p><code>semi-condensed</code>, <code>condensed</code>, <code>extra-condensed</code>, <code>ultra-condensed</code>:<br>
+                Specifies a more condensed font face than normal, with <code>ultra-condensed</code> as the most condensed.</p>
+
+            <p><code>semi-expanded</code>, <code>expanded</code>, <code>extra-expanded</code>, <code>ultra-expanded</code>:<br>
+                Specifies a more expanded font face than normal, with <code>ultra-expanded</code> as the most expanded.</p>
+
+            <p><code>&lt;percentage&gt;</code>:<br>
+                A <code>&lt;percentage&gt;</code> value between 50% and 200% (inclusive). Negative values are not allowed for this property.</p>
+            
+            <img src="../image/135614.jpg" alt="keyword-percentage">
+
+            <h3>Example</h3>
+
+            <h4>CSS</h4>
+
+            <pre class=ex>
+            .condensed {
+                font-stretch: 50%;
+            }
+                  
+            .normal {
+                font-stretch: 100%;
+            }
+                  
+            .expanded {
+                font-stretch: 200%;
+            }    
+            </pre>
+
+            <h4>html</h4>
+
+            <pre class=ex>
+            &lt;p class=condensed&gt;This is a Text.&lt;/p&gt;<br>
+            &lt;p class=normal&gt;This is a Text.&lt;/p&gt;<br>
+            &lt;p class=expanded&gt;This is a Text.&lt;/p&gt;
+            </pre>
+
+            <h3>Result</h3>
+
+            <pre>
+            <p class=condensed>This is a Text.</p>
+            <p class=normal>This is a Text.</p>
+            <p class=expanded>This is a Text.</p>
+            </pre>
+
+            <p >The CSS property font-stretch was initially defined in CSS 2, but dropped in CSS 2.1 due to lack of implementation experience.<br>
+               It has been newly defined in CSS 3.</p>
+
+            <li class=top><a href="#top">Back to top</a></li>
+
+        </article>
+        <br><br><br>
+
+        <article id="style">
+            <h2>font-style</h2>
+
+            <p>The font-style CSS property sets whether a font should be styled with a normal, italic, or oblique face from its font-family.</p>
+            
+            <h3>Values</h3>
+
+            <p><code>normal</code>:<br>
+                Selects a font that is classified as <code>normal</code> within a font-family.</p>
+
+            <p><code>italic</code>:<br>
+                Selects a font that is classified as <code>italic</code>. If no italic version of the face is available, 
+                one classified as <code>oblique</code> is used instead. If neither is available, the style is artificially simulated.</p>
+
+            <p><code>oblique</code>:<br>
+                Selects a font that is classified as <code>oblique</code>. If no oblique version of the face is available, 
+                one classified as <code>italic</code> is used instead. If neither is available, the style is artificially simulated.</p>
+                
+            <h3>Example</h3>
+
+            <h4>CSS</h4>
+
+            <pre class=ex>
+            .normal {
+                font-style: normal;
+            }
+                  
+            .italic {
+                font-style: italic;
+            }
+                  
+            .oblique {
+                font-style: oblique;
+            }
+            </pre>
+
+            <h4>html</h4>
+
+            <pre class=ex>
+                &lt;p class=normal&gt;This Text is normal.&lt;/p&gt;<br>
+                &lt;p class=italic&gt;This Text is italic.&lt;/p&gt;<br>
+                &lt;p class=oblique&gt;This Text is oblique.&lt;/p&gt;
+            </pre>
+
+            <h3>Result</h3>
+
+            <pre>
+                <p class=normal>This Text is normal.</p>
+                <p class=italic>This Text is italic.</p>
+                <p class=oblique>This Text is oblique.</p>
+            </pre>
+
+            <li class=top><a href="#top">Back to top</a></li>
+
+        </article>
+
+    </body>
+    <br><br><br>
+
+    <footer>
+        <address>
+            <p>Group Member: 409850061 林鼎宸 409850400 簡宏宇  409850434 楊浩中 409850392 李明樺 </p>
+        </address>
+        
+    </footer>
+
+</html>

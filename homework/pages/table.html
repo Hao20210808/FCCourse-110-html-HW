@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+
+        <link href="../style/style.css" rel="stylesheet" type="text/css">
+
+        <title>Structure: Table</title>
+
+    </head>
+
+    <body>
+        <nav>
+            <ul>
+                <li><a href="../Main.html">CONTENTS</a></li>
+                <li><a href="divblock.html">Structure:<br>Div Block</a></li>
+                <li><a href="table.html">Structure:<br>Table</a></li>
+                <li><a href="list.html">Structure:<br>List</a></li>
+                <li><a href="meta.html" target="_self">Structure:<br>Meta</a></li>
+                <li><a href="footer.html" target="_self">Structure:<br>Footer</a></li>
+                <li><a href="font.html">CSS:<br>Font Related Property</a></li>
+                <li><a href="color.html">CSS:<br>Element Color&Border</a></li>
+                <li><a href="placement.html">CSS:<br>Element Placement (Layout)</a></li>
+               
+            </ul>
+        </nav>
+        
+        <h1>Structure Part 2: Table</h1>
+        <h4>table in HTML</h4>
+        <p>When we write HTML, we will use the layout of the table editing layout, which contains several important tags, namely table, tr and td, and then combine them as a complete table</p>
+        <br/>
+        <br/>
+
+        <h4>Three most common and definitely used tags in HTML tables</h4>
+        <p><b>&lt;table&gt;</b> is used to wrap the structure and content of the entire table; <b>&lt;tr&gt;</b> (table row) is used to define several rows (rows) in the table; <b>&lt;td&gt;</b> (table data) is used to define the table There are several straight lines (cloumn), as for <b>&lt;td&gt;</b>, the actual cell information is placed in it.</p>
+        <br/>
+        <p>In addition to writing a simple table, we can also set the <b>width</b>, <b>height</b> or <b>border style</b> of the table. To do these settings, you must first understand several elements that can control the table, such as width, border, background, etc. .</p>
+        <br/>
+        <ul>
+            <li><b>width:</b> controls the width of the table.</li>
+            <li><b>border:</b> controls the thickness of the table border.</li>
+            <li><b>background:</b> controls the background image.</li>
+            <li><b>colspan:</b> controls how many fiels the cell spans.</li>
+            <li><b>rowspan:</b> controls how many columns the cell spans vertically.</li>
+        </ul>
+        <br/>
+        <br/>
+        <hr/>
+        <br/>
+
+        <h4>The first is the configuration of the fields</h4>
+        <img src="../image/223339.jpg" width="400" />
+        <p>In our example, we use the &lt;table&gt; and &lt;/table&gt; tags to wrap the content, the &lt;tr&gt;&gt;&lt;/tr&gt; tags represent a row, and the &lt;td&gt;&gt;&lt;/td&gt; tags represent a column.</p>
+        <br/>
+        <p>If the border needs to be clearly displayed, we can add the setting of border="1" to the table, which means that the border thickness of the table is 1. In actual use, you can also set it to other values, such as HTML in general. The default border="0" will not display the border.</p>
+        <br/>
+        <br/>
+
+        <h4>And here is the output:</h4>
+        <table width="250" border="1">
+            <tr>
+                <td>The first field</td>
+                <td>The second field</td>
+            </tr>
+        </table>
+
+        <br/>
+        <br/>
+        <hr/>
+        <br/>
+
+        <h4>2X2 of table</h4>
+        <img src="../image/225320.jpg" width="400" />
+        <br/>
+        <br/>
+        <h4>And here is the output:</h4>
+        <table width="250" border="1">
+            <tr>
+                <td>The first field of the first row</td>
+                <td>The second field of the first row</td>
+            </tr>
+            <tr>
+                <td>The first field of the second row</td>
+                <td>The second field of the second row</td>
+            </tr>
+        </table>
+
+        <br/>
+        <br/>
+        <hr/>
+        <br/>
+
+        <h4>Turn the first row into a field</h4>
+        <img src="../image/225959.jpg" width="400" />
+        <br/>
+        <br/>
+        <h4>And here is the output:</h4>
+        <table width="250" border="1">
+            <tr>
+                <td colspan="2">The first column</td>
+            </tr>
+            <tr>
+                <td>The first field of the second row</td>
+                <td>The second field of the second row</td>
+            </tr>
+        </table>
+
+        <br/>
+        <br/>
+        <hr/>
+        <br/>
+
+        <h4>Turn the table with two columns in one row</h4>
+        <img src="../image/231236.jpg" width="400" />
+        <br/>
+        <br/>
+        <h4>And here is the output:</h4>
+        <table width="250" border="1">
+            <tr>
+                <td rowspan="2">The first field</td>
+                <td>The first field of the second column</td>
+            </tr>
+            <tr>
+                <td>The second field of the second column</td>
+            </tr>
+        </table>
+
+        <br/>
+        <br/>
+        <hr/>
+        <br/>
+
+        <h4>Next we make a simple table example:</h4>
+        <p>So here is an example. Today is your friend's birthday and now we want to display how much we need for bake the cake, such as strawberry cake because I like it. then we could do like this one...</p>
+        <br/>
+        <img src="../image/223319.jpg" width="400" />
+        <br/>
+        <br/>
+        <h4>And here is the output:</h4>
+        <table width="600" border="1">
+            <tr>
+                <td>Strawberry</td>
+                <td>Milk</td>
+                <td>Low-gluten flour</td>    
+                <td>Fresh cream</td>
+                <td>White sugar</td>
+                <td>Egg</td>
+            </tr>
+
+            <tr>
+                <td>250 g</td>
+                <td>100 g</td>
+                <td>75 g</td>
+                <td>75 g</td>
+                <td>60 g</td>
+                <td>2</td>
+            </tr>
+        </table>
+        
+    </body>
+
+    <footer>
+        <address>
+            <p>Group Member: 409850061 林鼎宸 409850400 簡宏宇  409850434 楊浩中 409850392 李明樺 </p>
+        </address>
+        
+    </footer>
+    
+</html>

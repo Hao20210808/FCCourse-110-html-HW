@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+
+        <link href="../style/style.css" rel="stylesheet" type="text/css">
+
+        <title>Structure: Div Block </title>
+
+    </head>
+
+    <body>
+        <nav>
+            <ul>
+                <li><a href="../Main.html">CONTENTS</a></li>
+                <li><a href="divblock.html">Structure:<br>Div Block</a></li>
+                <li><a href="table.html">Structure:<br>Table</a></li>
+                <li><a href="list.html">Structure:<br>List</a></li>
+                <li><a href="meta.html" target="_self">Structure:<br>Meta</a></li>
+                <li><a href="footer.html" target="_self">Structure:<br>Footer</a></li>
+                <li><a href="font.html">CSS:<br>Font Related Property</a></li>
+                <li><a href="color.html">CSS:<br>Element Color&Border</a></li>
+                <li><a href="placement.html">CSS:<br>Element Placement (Layout)</a></li>
+               
+            </ul>
+        </nav>
+        
+        <h1>Structure Part 1: The Div Block</h1>
+        <h4>What is div tag?</h4>
+        <p>HTML div tag is an important basic element in web pages. Through DIV tags, various blocks can be created in web pages, and smaller blocks can be added to each block. 
+            In addition, HTML div blocks can also be used for typesetting when designing web pages. 
+            For web browsers, each group of HTML div tags is a block-level element, which basically takes up a whole line of space, and we can also This part is adjusted through the attribute setting of div, but the current div attribute setting is roughly designed with CSS.</p>
+        <br/>
+        <br/>
+        <hr/>
+
+        <h4>Basic syntax of div tag block</h4>
+        <p>&lt;div id="Customize" class="Customize" style="Customize"&gt;<b>block content</b>&lt;/div&gt;</p>
+        <br/>
+        <p>A set of standard div blocks is composed of an opening <b>&lt;div&gt;</b> tag and a closing <b>&lt;/div&gt;</b> tag, and the backpacked part is the block content, which can be text, pictures, videos, frames, etc. Web page content, the id, class can be set in the <b>&lt;div&gt;</b> block at the beginning, or a style design can be started directly, that is, the style part.</p>
+        
+        <br/>
+        <br/>
+        <hr/>
+        <br/>
+
+        <h4>Example01: Design a div tag block with a border</h4>
+        <p>Use style in the opening &lt;div&gt; tag to declare a CSS style syntax, and border is the standard syntax for designing element borders.</p>
+        <br/>
+        <img src="../image/033508.jpg" width="600" />
+
+        <h4>And here is the output:</h4>
+        <div style="border:2px red solid;">This is an HTML div with an red border</div>
+    
+        <br/>
+        <br/>
+        <hr/>
+        <br/>
+
+        <h4>Example02: Design a div tag block with a background color</h4>
+        <p>Change the border in <b>Example01</b> to the background-color property used to design the background color of the element. This is a very common div background color design technique, and the color is usually adjusted with a 16-bit color code.</p>
+        <br/>
+        <a href="https://www.rapidtables.com/web/color/html-color-codes.html">Color code table link</a>
+        <br/>
+        <br/>
+        <img src="../image/034131.jpg" width="600" />
+
+        <h4>And here is the output:</h4>
+        <div style="background-color:gray;">This is an HTML div with a gray background color</div>
+    
+        <br/>
+        <br/>
+        <hr/>
+        <br/>
+
+        <h4>Make the two blocks wrapped together</h4>
+        <p>Combining the results of <b>Example01</b> and <b>Example02</b>, we put the pink HTML div tag group of <b>Example02</b> in the orange border div block of <b>Example01</b>. In order to make the example more clear, we put a large orange div in the outer periphery. The padding attribute is added to the block to prevent the two div blocks from sticking together. You can see these two beautiful blocks from the output of the example.</p>
+        <br/>
+        <img src="../image/035445.jpg" width="600" />
+
+        <h4>And here is the output:</h4>
+        <div style="border:2px red solid;padding:15px;">
+        <div style="background-color:gray;">This is an HTML div with a gray background color</div>
+        </div>
+    </body>
+
+    <footer>
+        <address>
+            <p>Group Member: 409850061 林鼎宸 409850400 簡宏宇  409850434 楊浩中 409850392 李明樺 </p>
+        </address>
+        
+    </footer>
+
+</html>
